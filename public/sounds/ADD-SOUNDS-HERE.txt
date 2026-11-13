@@ -1,0 +1,8 @@
+Optional portrait sound effects
+
+Place your two audio files in this folder with these exact names:
+
+1. pull.mp3  - plays once when the portrait is actually pulled/dragged
+2. ouch.mp3  - plays when a drag is released and the ouch reaction appears
+
+The portrait works normally if these files are absent.
