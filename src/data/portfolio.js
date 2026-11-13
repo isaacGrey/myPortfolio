@@ -122,7 +122,8 @@ export const projects = [
     icon: 'users',
   },
   {
-    cover: null,
+    cover: '/projects/accountingsuite/accountingsuite.jpg',
+    coverFit: 'contain',
     screenshots: [],
     number: '02',
     type: 'INTEGRATIONS / ENTERPRISE',
@@ -138,7 +139,8 @@ export const projects = [
     icon: 'workflow',
   },
   {
-    cover: null,
+    cover: '/projects/accountingsuite/accountingsuite.jpg',
+    coverFit: 'contain',
     screenshots: [],
     number: '03',
     type: 'ENTERPRISE / IMPLEMENTATION',
