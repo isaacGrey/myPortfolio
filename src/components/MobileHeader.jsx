@@ -1,8 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { navigation, profile } from '../data/portfolio.js';
-import ThemeToggle from './ThemeToggle.jsx';
 
-export default function MobileHeader({ activeSection, theme, onToggleTheme, menuOpen, setMenuOpen }) {
+export default function MobileHeader({ activeSection, menuOpen, setMenuOpen }) {
   const activeLabel = navigation.find((item) => item.id === activeSection)?.label ?? 'Overview';
 
   return (
@@ -16,7 +15,6 @@ export default function MobileHeader({ activeSection, theme, onToggleTheme, menu
           </span>
         </a>
         <div className="mobile-header-actions">
-          <ThemeToggle theme={theme} onToggle={onToggleTheme} compact />
           <button
             type="button"
             className="menu-toggle"
