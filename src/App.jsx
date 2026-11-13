@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import { ArrowUp, ArrowUpRight, Download } from 'lucide-react';
 import Sidebar from './components/Sidebar.jsx';
 import MobileHeader from './components/MobileHeader.jsx';
-import ThemeToggle from './components/ThemeToggle.jsx';
 import { navigation, profile } from './data/portfolio.js';
-import { usePortfolioScroll, useTheme } from './hooks/usePortfolioUI.js';
+import { usePortfolioScroll } from './hooks/usePortfolioUI.js';
 import Hero from './sections/Hero.jsx';
 import About from './sections/About.jsx';
 import Experience from './sections/Experience.jsx';
@@ -16,7 +15,6 @@ import Certifications from './sections/Certifications.jsx';
 import Contact from './sections/Contact.jsx';
 
 export default function App() {
-  const { theme, toggleTheme } = useTheme();
   const activeSection = usePortfolioScroll();
   const [menuOpen, setMenuOpen] = useState(false);
   const activeItem = navigation.find((item) => item.id === activeSection) ?? navigation[0];
@@ -55,8 +53,6 @@ export default function App() {
       <Sidebar activeSection={activeSection} />
       <MobileHeader
         activeSection={activeSection}
-        theme={theme}
-        onToggleTheme={toggleTheme}
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
       />
@@ -67,7 +63,6 @@ export default function App() {
             <div className="breadcrumbs"><span>PORTFOLIO</span><i>/</i><strong>{activeItem.label.toUpperCase()}</strong></div>
             <div className="topbar-right">
               <span className="page-marker">IB — {activeItem.index}</span>
-              <ThemeToggle theme={theme} onToggle={toggleTheme} />
             </div>
           </div>
 
