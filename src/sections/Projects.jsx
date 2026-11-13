@@ -65,7 +65,8 @@ export default function Projects() {
               <div className="project-card-footer">
                 <span className="project-card-view">View details <ArrowUpRight size={14} /></span>
                 {project.href ? (
-                  <a href={project.href} target="_blank" rel="noreferrer" className="project-link">
+                  <a href={project.href} target="_blank" rel="noreferrer"
+                    className={project.action === 'View demo' ? 'project-link project-link--demo' : 'project-link'}>
                     {project.action}<ArrowUpRight size={15} />
                   </a>
                 ) : <span className="project-unavailable">{project.note || 'Private project'}</span>}

@@ -9,6 +9,7 @@ export default function ProjectCover({ project, Icon, className = '' }) {
     <div className={`project-cover ${hasImage ? 'project-cover--image' : ''} ${className}`}>
       {hasImage ? (
         <img src={project.cover} alt={`${project.title} project cover`} loading="lazy"
+          style={project.coverPosition ? { objectPosition: project.coverPosition } : undefined}
           onError={() => setFailed(true)} />
       ) : (
         <div className="project-cover-placeholder" aria-hidden="true">
